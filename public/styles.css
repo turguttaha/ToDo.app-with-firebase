@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 20vh auto;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.todo-item .delete-button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#todo-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-button {
+    width: 100%;
+    background-color: #008CBA;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#add-button:hover {
+    width: 100%;
+    background-color: #013f53;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#sign-out-button{
+    background-color: #8b0101;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 4vh;
+    margin-left:2vw;
+}
+
+ #sign-out-button:hover{
+    background-color: #4d0202;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 4vh;
+    margin-left:2vw;
+ }
+
+.right {
+    display: flex;
+    align-items: center;
+
+}
+.right > * {
+    margin: 0 10px;
+}
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Background color */
+    color: #333; /* Text color */
+    font-size: 44px; /* Text size */
+    font-weight: bold; /* Text weight */
+    text-align: center;
+  }
+
+#login, #register,#todos{
+    display: none;
+}
+
+#login, #register {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 25vw;
+    margin: 20vh auto;
+    border-radius: 5px;
+  }
+
+#login-email, #login-password,#register-email,#register-password{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-button,#register-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  #login-button:hover,#register-button:hover{
+    background-color: #023062;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+#go-to-login,#go-to-register {
+    color: #007bff;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block;
+  }
+  #go-to-login:hover,#go-to-register:hover {
+    color: orange;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block;
+  }
+

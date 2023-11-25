@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>UCLL ToDo</title>
+</head>
+<body>
+  
+  <section id="loading">Loading...</section>
+  
+  <section id="login">
+    <h1>ToDo App</h1>
+    <input id="login-email" type="text" placeholder="email" />
+    <input id="login-password" type="password" placeholder="password" />
+    <button id="login-button">Login</button>
+    <a href="#" id="go-to-register">No account yet? Register!</a>
+</section>
+
+<section id="register">
+  <h1>ToDo App</h1>
+    <input id="register-email" type="text" placeholder="email"/>
+    <input id="register-password" type="password"  placeholder="password"/>
+    <button id="register-button">Register</button>
+    <a href="#" id="go-to-login">Already have an account? Log in!</a>
+</section>
+
+<section id="todos">
+  <button id="sign-out-button">Sign Out</button>
+<div class="container">
+  
+  <h1>To-Do List</h1>
+  <ul id="todo-items-list"  class="todo-list">
+
+  </ul>
+  <input type="text" id="todo-input" placeholder="Add a new task">
+  <button id="add-button">Add Task</button>
+</div>
+</section>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+        import { getFirestore, collection, query, where, getDocs,addDoc,deleteDoc,doc,setDoc  } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js'
+        import{getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword, setPersistence, browserSessionPersistence } from 'https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js'
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyBgln3kAYBHoeT0IG5mYTtF2WOR6KG6GG0",
+          authDomain: "ucll-todo-514a6.firebaseapp.com",
+          projectId: "ucll-todo-514a6",
+          storageBucket: "ucll-todo-514a6.appspot.com",
+          messagingSenderId: "654074755237",
+          appId: "1:654074755237:web:6bbbc9b7c176da4602754c"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(window.app)
+        const auth = getAuth(app);
+        auth.setPersistence(browserSessionPersistence)
+        window.firestore = {
+          collection,
+          query,
+          where,
+          getDocs,
+          addDoc,
+          deleteDoc,
+          doc,
+          setDoc
+        }
+        
+        window.firebase = {
+          isReady: function(){
+            return !!app && !!db;
+          },
+          db,
+          app,
+          auth,
+          createUserWithEmailAndPassword,
+          signInWithEmailAndPassword,
+          setPersistence,
+          browserSessionPersistence
+        };
+      </script>
+       <script src="code.js" defer></script>
+</body>
+</html>
